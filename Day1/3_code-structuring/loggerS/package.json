@@ -1,0 +1,8 @@
+{
+  "name": "loggers",
+  "version": "1.0.0",
+  "description": "Pattern Implementation",
+  "main": "logger.js",
+  "author": "Manish Sharma",
+  "license": "ISC"
+}

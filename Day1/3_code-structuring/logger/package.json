@@ -1,0 +1,8 @@
+{
+  "name": "logger1",
+  "version": "1.0.0",
+  "description": "Understanding Module Loading",
+  "main": "my-logger.js",
+  "author": "Manish Sharma",
+  "license": "ISC"
+}

@@ -1,0 +1,1 @@
+console.log("Logged from Logger.js file.");
