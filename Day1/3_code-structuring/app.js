@@ -41,13 +41,13 @@
 
 const loggerFactory = require('./loggerFactory');
 
-let dbLogger;
-let flLogger;
+let dbLogger = loggerFactory.DBLFactory.getLogger();
+let flLogger = loggerFactory.FLFactory.getLogger();;
 
 dbLogger.log('Hello from App Module');
 flLogger.log('Hello from App Module');
 
-let dbLogger1;
-let dbLogger2;
+let dbLogger1 = loggerFactory.DBLFactory.getLogger();
+let dbLogger2 = loggerFactory.DBLFactory.getLogger();
 
 console.log(dbLogger1 === dbLogger2);
