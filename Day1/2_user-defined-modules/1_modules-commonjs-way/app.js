@@ -21,9 +21,14 @@
 // console.log(e1.getName());
 
 // ------------------------ Object Destructuring
-const { Employee } = require('./lib.js');
+// const { Employee } = require('./lib.js');
 
-let e1 = new Employee("Manish");
-console.log(e1.getName());
-e1.setName("Ramakant");
-console.log(e1.getName());
+// let e1 = new Employee("Manish");
+// console.log(e1.getName());
+// e1.setName("Ramakant");
+// console.log(e1.getName());
+
+// ----------------------------- Loading Global
+require('./globalObject.js');
+console.log(global.myObject);
+console.log(myObject);

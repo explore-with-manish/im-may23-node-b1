@@ -1,0 +1,3 @@
+global.myObject = {
+    message: 'Hello'
+};

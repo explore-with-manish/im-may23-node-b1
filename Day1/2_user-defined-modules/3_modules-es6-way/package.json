@@ -1,0 +1,12 @@
+{
+  "name": "modules-es6",
+  "version": "1.0.0",
+  "description": "Understanding Modules in Node",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manish Sharma",
+  "license": "ISC"
+}
