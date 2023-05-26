@@ -6,6 +6,7 @@
   "author": "Manish Sharma",
   "license": "ISC",
   "dependencies": {
-    "chokidar": "^3.5.3"
+    "chokidar": "^3.5.3",
+    "lodash": "^4.17.21"
   }
 }
