@@ -1,0 +1,11 @@
+{
+  "name": "folder-watcher",
+  "version": "1.0.0",
+  "description": "Learning how to use, external modules in node",
+  "private": true,
+  "author": "Manish Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  }
+}
