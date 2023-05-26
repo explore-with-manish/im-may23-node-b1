@@ -1,0 +1,13 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "Learning how to use express js",
+  "main": "app.js",
+  "private": "true",
+  "author": "Manish Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  }
+}
