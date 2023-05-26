@@ -54,6 +54,7 @@ sEmitter.on('data', (s) => {
 
 wsServer.on('request', (req) => {
     let connection = req.accept('echo-protocol');
+    // console.log(connection);
 
     let id = count++;
     clients[id] = connection;
