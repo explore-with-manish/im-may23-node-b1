@@ -32,7 +32,7 @@
 const http = require('http');
 const fs = require('fs');
 
-const server = http.createServer((req, res) => {
+const reqHandler = (req, res) => {
     fs.readFile('./index.html', 'utf-8', (err, htmlContent) => {
         if (err) {
             res.setHeader('content-type', 'text/plain');
@@ -45,7 +45,9 @@ const server = http.createServer((req, res) => {
             res.end();
         }
     });
-});
+};
+
+const server = http.createServer(reqHandler);
 
 server.listen(3000);
 
