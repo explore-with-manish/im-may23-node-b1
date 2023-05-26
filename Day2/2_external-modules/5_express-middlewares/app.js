@@ -38,7 +38,7 @@ app.use(favicon(__dirname + "/public/images/favicon.png"));
 
 app.get('/', (req, res, next) => {
     console.log('Get Request Handler - Index');
-    throw new Error("Just for Check");
+    // throw new Error("Just for Check");
     res.render("index", { pageTitle: "Index View", sp: '<span>Hello</span>' });
 });
 

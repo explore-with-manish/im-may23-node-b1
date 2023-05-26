@@ -1,0 +1,25 @@
+extend layout.pug 
+
+mixin renderPartial(emp)
+    include partials/employee-row.pug
+
+block pagecontent
+    h3 This is the Employees view.
+
+    ul.list-group
+        li.list-group-item
+            a(href="/") Back to Home
+
+    table.table.table-hover.table-striped 
+        thead 
+            tr 
+                th ID 
+                th NAME 
+                th 
+                th ACTIONS 
+                th 
+        tbody 
+            each employee in empList
+                +renderPartial(employee)
+            //- each emp in empList
+            //-     include partials/employee-row.pug
