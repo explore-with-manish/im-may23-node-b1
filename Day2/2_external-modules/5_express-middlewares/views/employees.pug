@@ -1,5 +1,8 @@
 extend layout.pug 
 
+mixin renderPartial(emp)
+    include partials/employee-row.pug
+
 block pagecontent
     h3 This is the Employees view.
 
@@ -16,5 +19,7 @@ block pagecontent
                 th ACTIONS 
                 th 
         tbody 
-            each emp in empList 
-                include partials/employee-row.pug
+            each employee in empList
+                +renderPartial(employee)
+            //- each emp in empList
+            //-     include partials/employee-row.pug

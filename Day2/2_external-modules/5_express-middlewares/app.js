@@ -38,6 +38,7 @@ app.use(favicon(__dirname + "/public/images/favicon.png"));
 
 app.get('/', (req, res, next) => {
     console.log('Get Request Handler - Index');
+    throw new Error("Just for Check");
     res.render("index", { pageTitle: "Index View", sp: '<span>Hello</span>' });
 });
 
@@ -54,6 +55,13 @@ app.get('/about', (req, res, next) => {
 app.get('/employees', (req, res, next) => {
     console.log('Get Request Handler - Employees');
     res.render("employees", { pageTitle: "Employees View", empList: employees });
+});
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+    console.log(`Error Handler....`);
+    console.log(err);
+    res.status(500).send("Server Error");
 });
 
 // ------------------------------------------------------------------- Hosting Code
