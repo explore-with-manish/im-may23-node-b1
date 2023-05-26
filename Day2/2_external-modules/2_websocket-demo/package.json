@@ -1,0 +1,12 @@
+{
+  "name": "websocket-demo",
+  "version": "1.0.0",
+  "description": "Web SOcket Demo Application",
+  "main": "app.js",
+  "private": "true",
+  "author": "Manish Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "websocket": "^1.0.34"
+  }
+}
