@@ -6,9 +6,24 @@
 
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
 
 var server = http.createServer((req, res) => {
-    
+    if (req.url !== '/favicon.ico') {
+        const filepath = path.join(process.cwd(), req.url + '.pdf');
+        const readStream = fs.createReadStream(filepath);
+        res.setHeader('content-type', 'application/pdf');
+        readStream.pipe(res);
+
+        readStream.on('error', (err) => {
+            res.setHeader('content-type', 'text/plain');
+            res.statusCode = 404;
+            res.end("File Not Found...");
+        });
+    } else {
+        res.statusCode = 404;
+        res.end();
+    }
 });
 
 server.listen(3000);
