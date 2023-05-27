@@ -4,15 +4,19 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const favicon = require('serve-favicon');
+
 const mongoose = require('mongoose');
 
 const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
 
+require('./config/passport-config')(passport);
+
 const indexRouter = require('./routes/index');
 const employeesRouter = require('./routes/employees');
-const accountRouter = require('./routes/account');
+const accountRouter = require('./routes/account')(passport);
 
 mongoose.connect(process.env.mongoUri);
 
@@ -27,6 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.png')));
 
 app.use(session({ secret: process.env.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
