@@ -1,0 +1,10 @@
+extend ../layout.pug
+
+block pagecontent
+    ul.list-group
+        li.list-group-item 
+            a(href="/employees") Back to Employees
+    
+    .row.text-center 
+        h2.text-info= employee.id
+        h2.text-info= employee.name
