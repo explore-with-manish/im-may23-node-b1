@@ -1,0 +1,9 @@
+tr 
+    td= emp.id
+    td= emp.name 
+    td 
+        a.text-info(href="/employees/details/"+emp.id) Details
+    td 
+        a.text-warning(href="/employees/edit/"+emp.id) Edit 
+    td 
+        a.text-danger(href="/employees/delete/"+emp.id) Delete

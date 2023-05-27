@@ -1,0 +1,13 @@
+extend ../layout.pug
+
+block pagecontent
+    .row.text-center 
+        h2.text-danger Are you sure you want to delete this record?
+    .row.text-center 
+        h2.text-info= employee.id
+        h2.text-info= employee.name
+    .row.text-center
+        form(method="post")
+            button.btn.btn-danger(type="submit") Delete 
+            | | &nbsp 
+            a(href="/employees") Back to Employees 
