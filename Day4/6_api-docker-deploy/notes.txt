@@ -1,0 +1,7 @@
+1. Create a Dockerfile
+2. Build the image using the Dockerfile
+    docker build -t node-api-server-image .
+3. Run the Container
+    docker run --name node-api-server-container -p 1001:3000 -d node-api-server-image
+
+Access you Application from PORT 1001
