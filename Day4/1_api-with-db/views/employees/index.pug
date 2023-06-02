@@ -1,0 +1,24 @@
+extend ../layout.pug
+
+block pagecontent
+    ul.list-group
+        li.list-group-item 
+            a(href="/") Back to Home
+    
+    .row 
+        .col-sm-2 
+            button.btn.btn-primary.btn-block#btnLoad Load Employees 
+        .col-sm-10 
+            table.table.table-hover.table-striped 
+                thead 
+                    tr 
+                        th ID
+                        th NAME 
+                        th 
+                        th ACTIONS 
+                        th 
+                tbody#empTableBody 
+
+block pagescripts
+    script(src="/javascripts/client-app.js") 
+            
