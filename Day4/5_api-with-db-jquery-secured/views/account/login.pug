@@ -1,0 +1,24 @@
+extend ../layout.pug
+
+block pagecontent
+    ul.list-group
+        li.list-group-item 
+            a(href="/") Back to Home
+    .container 
+        if message.length 
+            h4.alert.alert-danger= message 
+        .row 
+            .col-sm-6.col-md-4.col-sm-offset-3.col-md-offset-4
+                h1.text-center.login-title Sing in to continue
+                .account-wall
+                    img.profile-img(src='https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120', alt='')
+                    form.form-signin(method="post")
+                        input.form-control(type='text', placeholder='Email', required='', autofocus='', name='email')
+                        input.form-control(type='password', placeholder='Password', required='', name='password')
+                        button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+                        label.checkbox.pull-left
+                            input(type='checkbox', value='remember-me') 
+                            | Remember me
+                        a.pull-right.need-help(href='#') Need help? 
+                        span.clearfix
+                a.text-center.new-account(href='#') Create an account
