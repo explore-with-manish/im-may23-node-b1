@@ -20,5 +20,19 @@ block pagecontent
                 tbody#empTableBody 
 
 block pagescripts
+    script#employeeRowTemplate(type='text/x-jsrender')
+        <tr>
+            <td>{{:id}}</td>
+            <td>{{:name}}</td>
+            <td>
+                <a class='text-info' href='#'>Details</a>
+            </td>
+            <td>
+                <a class='text-warning' href='#'>Edit</a>
+            </td>
+            <td>
+                <a class='text-danger' href='#'>Delete</a>
+            </td>
+        </tr>
     script(src="/javascripts/client-app.js") 
             

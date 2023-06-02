@@ -3,6 +3,7 @@ $(document).ready(function () {
         // alert("Button was clicked...");
 
         // Do a AJAX call to get the JSON data and display the HTML on client side
+        $('#empTableBody').empty();
 
         $.ajax({
             url: 'http://localhost:3000/api/employees',
@@ -10,7 +11,9 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (response) {
                 if (response.data.length > 0) {
-                    console.log(response.data);
+                    var tmpl = $.templates('#employeeRowTemplate');
+                    var html = tmpl.render(response.data);
+                    $('#empTableBody').append(html);
                 }
             }, error: function (err) {
                 console.error(err);
