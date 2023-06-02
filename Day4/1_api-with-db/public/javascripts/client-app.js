@@ -14,6 +14,18 @@ $(document).ready(function () {
                     var tmpl = $.templates('#employeeRowTemplate');
                     var html = tmpl.render(response.data);
                     $('#empTableBody').append(html);
+
+                    // $.each(response.data, function (index, item) {
+                    //     var row = $('<tr>');
+                    //     var tdId = $('<td>').text(item.id);
+
+                    //     row.append(tdId);
+
+                    //     var tdName = $('<td>').text(item.name);
+                    //     row.append(tdName);
+
+                    //     $('#empTableBody').append(row);
+                    // });
                 }
             }, error: function (err) {
                 console.error(err);
