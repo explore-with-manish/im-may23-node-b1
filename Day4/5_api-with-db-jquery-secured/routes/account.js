@@ -12,5 +12,7 @@ module.exports = function(passport) {
     
     router.post('/login', accCtrl.login_post(passport));
 
+    router.post('/getToken', accCtrl.createToken);
+
     return router;
 };

@@ -1,4 +1,13 @@
 $(document).ready(function () {
+
+    $.post('http://localhost:3000/account/getToken', { username: 'indiamart', password: 'indiamart' }, function (data, status) {
+        if (data.success) {
+            window.sessionStorage.setItem('tk', data.token);
+        } else {
+            console.error(data.message);
+        };
+    })
+
     $('#btnLoad').click(function () {
         // alert("Button was clicked...");
 
@@ -18,7 +27,7 @@ $(document).ready(function () {
             }, error: function (err) {
                 console.error(err);
             }, beforeSend: function (xhr) {
-                xhr.setRequestHeader('x-access-token', 'naskldaslkdjlaskjdlkasjdlasjl');
+                xhr.setRequestHeader('x-access-token', window.sessionStorage.getItem('tk'));
             }
         });
     });
