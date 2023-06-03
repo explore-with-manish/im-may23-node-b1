@@ -1,8 +1,6 @@
-const cart = [];
+import { log } from './util';
 
-function log(message) {
-    console.log(message);
-}
+const cart = [];
 
 function addToCart(item) {
     cart.push(item);
