@@ -1,0 +1,12 @@
+{
+  "name": "simple-build",
+  "version": "1.0.0",
+  "description": "Testing Webpack",
+  "main": "index.js",
+  "author": "Manish Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1"
+  }
+}
