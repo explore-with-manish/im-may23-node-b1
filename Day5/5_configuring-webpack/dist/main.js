@@ -1,2 +1,0 @@
-(()=>{"use strict";var e,r,o={420:(e,r,o)=>{function t(e){console.log(e)}o.d(r,{c:()=>t})}},t={};function i(e){var r=t[e];if(void 0!==r)return r.exports;var c=t[e]={exports:{}};return o[e](c,c.exports,i),c.exports}i.d=(e,r)=>{for(var o in r)i.o(r,o)&&!i.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:r[o]})},i.o=(e,r)=>Object.prototype.hasOwnProperty.call(e,r),e=i(420),(r=[]).push("Air Filter"),(0,e.c)("added: Air Filter"),r.splice(0,1),(0,e.c)("removed item from index: 0"),(0,i(420).c)("registering ".concat("manish@abc.com"))})();
-//# sourceMappingURL=main.js.map

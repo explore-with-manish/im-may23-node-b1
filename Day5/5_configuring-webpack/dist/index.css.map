@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":"AAAA;IACI,uBAAuB;AAC3B,C","sources":["webpack://simple-build/./src/css/main.css"],"sourcesContent":["body {\r\n    background-color: azure;\r\n}"],"names":[],"sourceRoot":""}

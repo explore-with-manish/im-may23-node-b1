@@ -1,3 +1,4 @@
+import './css/main.css';
 import { log } from './util';
 
 const cart = [];
