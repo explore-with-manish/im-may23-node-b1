@@ -1,0 +1,18 @@
+body {
+    background-color: azure;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.bg {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+}
