@@ -1,0 +1,31 @@
+{
+  "name": "simple-build",
+  "version": "1.0.0",
+  "description": "Testing Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "set NODE_ENV=production&&webpack"
+  },
+  "author": "Manish Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.24",
+    "postcss-loader": "^7.3.2",
+    "postcss-preset-env": "^8.4.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.85.0",
+    "webpack-bundle-analyzer": "^4.9.0",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
